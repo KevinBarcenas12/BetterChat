@@ -1,0 +1,17 @@
+prefix:
+  this: '&7[&eBetter&cChat&7] &f'
+  join: '&7[&b+&7] &f'
+  quit: '&7[&4-&7] &f'
+  socialspy: '&7[&cSC&7] '
+  broadcast: '&7[&bBroadCast&] &f'
+messages:
+  noPerms: '&4No tienes permiso para eso!'
+  actual-gamemode: '&6Tu modo de juego no ha cambiado'
+  null-args: '&cArgumentos no válidos!'
+chat:
+  style: '&5%player% &c>> &f%message%'
+  staff: '&7[&3StaffChat&7] &7[&5%player%&7] &8%message%'
+  op-prefix: '&4[OP] &5'
+banned-blocks:
+  - glass
+  - obsidian

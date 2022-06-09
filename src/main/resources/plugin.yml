@@ -1,0 +1,152 @@
+name: BetterChat
+version: ${project.version}
+main: com.laynox.betterchat.Main
+api-version: 1.17
+authors: [ LaYNoX__ ]
+description: Mejoras visuales para el chat!
+commands:
+  tele:
+    description: Te permite teleportarte a otros jugadores!
+    usage: /<command>
+    aliases:
+      - tp
+      - teleport
+  gamemode:
+    description: Cambia tu modo de juego
+    usage: /<command> <gamemode>
+    aliases:
+      - gm
+  creative:
+    description: Te cambia a modo Creativo
+    aliases:
+      - c
+  survival:
+    description: Te cambia a modo Supervivencia
+    usage: /<command>
+    aliases:
+      - s
+      - surv
+  spectator:
+    description: Te cambia a modo Espectador
+    usage: /<command>
+    aliases:
+      - spectate
+      - spec
+      - sp
+  adventure:
+    description: Te cambia a modo Aventura
+    usage: /<command>
+    aliases:
+      - a
+      - ad
+      - adv
+  god:
+    description: Te hace invencible
+    usage: /<command>
+    aliases:
+      - dios
+      - invincible
+      - godmode
+  msg:
+    description: Mensajes directos
+    usage: /<command> <player> <message>
+    aliases:
+      - tell
+      - w
+      - whisper
+      - private
+  vanish:
+    description: Te hace invisible
+    usage: /<command>
+    aliases:
+      - v
+  socialspy:
+    description: Te permite espiar conversaciones!
+    usage: /<command>
+    aliases:
+      - ss
+      - spy
+  op:
+    description: Set operator
+    usage: /<command> <player>
+  deop:
+    description: Unset operator
+    usage: /<command> <player>
+  freeze:
+    description: Congela jugadores
+    usage: /<command> <player>
+  mute:
+    description: Silencia los mensajes de un jugador
+    usage: /<command> <player>
+  bcreload:
+    description: nada
+permissions:
+  bc.*:
+    description: Uso completo del Plugin
+    default: op
+  bc.tele:
+    description: Uso completo del comando /tele
+    default: true
+    children:
+      bc.*: true
+  bc.tele.others:
+    description: Teleportar a otros jugadores
+    default: op
+    children:
+      bc.tele: true
+      bc.*: true
+  bc.tele.self:
+    description: Teleportarte a otros jugadores
+    default: true
+    children:
+      bc.tele: true
+      bc.*: true
+  bc.gamemode:
+    description: Acceso a todos los Gamemode
+    default: op
+    children:
+      bc.*: true
+  bc.gamemode.creative:
+    description: Acceso al modo Creativo
+    default: op
+    children:
+      bc.gamemode: true
+      bc.*: true
+  bc.gamemode.survival:
+    description: Acceso al modo Supervivencia
+    default: op
+    children:
+      bc.gamemode: true
+      bc.*: true
+  bc.gamemode.spectator:
+    description: Acceso al modo Espectador
+    default: op
+    children:
+      bc.gamemode: true
+      bc.*: true
+  bc.gamemode.adventure:
+    description: Acceso al modo Aventura
+    default: op
+    children:
+      bc.gamemode: true
+      bc.*: true
+  bc.god:
+    description: Acceso al /god
+    default: op
+    children:
+      bc.*: true
+  bc.msg:
+    description: Mensajes directos
+    default: true
+    children:
+      bc.*: true
+  bc.op:
+    description: Permiso para hacer moderador a otros
+    default: op
+    children:
+      bc.*: true
+  bc.deop:
+    description: Permiso para quitar operador a otros
+    default: op
+    children:
+      bc.*: true
